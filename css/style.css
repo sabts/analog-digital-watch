@@ -1,3 +1,8 @@
+:root {
+    --hours-rotate: 90deg;
+    --minutes-rotate: 180deg;
+    --seconds-rotate: 0deg;
+}
 *{
     box-sizing: border-box;
 }
@@ -21,4 +26,125 @@ nav ul{
 body{
     margin: 0;
     font-family: sans-serif;
+    color: whitesmoke;
+    background-color: rgb(29, 26, 27);
+}
+.main-clocks{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+
+}
+/*Digital Clock*/
+
+.digital-clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box{
+    font-size: 5rem;
+    font-weight: 900;
+}
+.date{
+    font-size: 1.5rem;
+}
+
+/*Analogic clock*/
+.analogic-clock {
+    border-radius: 50%;
+    box-shadow: -4px -4px 10px #43434380, inset 4px 4px 10px #00000080, inset -4px -4px 10px #43434380, 4px 4px 10px #0000004d;
+    height: 300px;
+    outline: 7px solid #282828;
+    padding: 0.8rem;
+    position: relative;
+    width: 300px;
+}
+.clock-face {
+    background: #282828;
+    border-radius: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.clock-face::before{
+    content: "";
+    background: #fff;
+    height: 100%;
+    left: 49%;
+    position: absolute;
+    width: 5px;
+}
+.clock-face::after{
+    content: "";
+    background: #fff;
+    height: 100%;
+    left: 49%;
+    position: absolute;
+    width: 5px;
+    rotate: 90deg;
+}
+.center-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #282828;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+.clock-center{
+    position: absolute;
+    top: 47%;
+    left:130px;
+    border-radius: 100%;
+    background-color: rgb(134, 134, 134);
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+.hour-hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 70px;
+    background-color: #595959;
+    transform-origin: bottom center;
+    transform: var(--hours-rotate);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.min-hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 110px;
+    background-color: #747373;
+    transform-origin: bottom center;
+    transform: var(--minutes-rotate);
+    z-index: 2;
+    border-radius: 2px;
+}
+.second-hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 110px;
+    background-color: red;
+    transform-origin: bottom center;
+    transform: var(--seconds-rotate);
+    z-index: 2;
+    border-radius: 2px;
 }
