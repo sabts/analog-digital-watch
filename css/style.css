@@ -71,7 +71,7 @@ body{
     position: relative;
     width: 100%;
 }
-
+/*línea de hora*/
 .clock-face::before{
     content: "";
     background: #fff;
@@ -113,7 +113,7 @@ body{
 
 .hour-hand{
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     width: 8px;
     height: 70px;
@@ -126,7 +126,7 @@ body{
 
 .min-hand{
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     width: 4px;
     height: 110px;
@@ -138,7 +138,7 @@ body{
 }
 .second-hand{
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     width: 3px;
     height: 110px;
