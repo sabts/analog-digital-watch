@@ -67,14 +67,14 @@ const timeForAnalogicClock = () => {
   let minutes = hands.getMinutes();
   let seconds = hands.getSeconds();
 
-  const hoursRotate = hours * 30;
+  const hoursRotate = hours * 30 + minutes / 2;
   //cada vez que pasa 60 min
   //La manecilla de las horas da una vuelta cada 12 horas.
   //12 horas → 360° → cada hora = 30°
   // //Grados= Horas transcurridas × 30°
   // //Grados= 3horas×30°=90°
 
-  const minutesRotate = minutes * 6;
+  const minutesRotate = minutes * 6 + seconds / 10;
   // cada vez que pasa 60 seg
   //1 segundo = 1/60 de minuto.
   //La manecilla de los minutos da una vuelta cada 60 minutos.
